@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :users
   root 'home#default'
+  
+  get 'user' => 'user#index'
   
   get 'about' => 'about#default'
   
