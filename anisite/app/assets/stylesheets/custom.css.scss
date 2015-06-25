@@ -2,15 +2,24 @@
 @import "bootstrap";
 
 body {
-padding-top: 60px;
+	padding-top: 60px;
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
 }
 
 input {
-  height: auto !important;
+	height: auto !important;
+}
+
+table {
+	width: 100%;
+	th, td {
+		padding: 10px;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
 }
