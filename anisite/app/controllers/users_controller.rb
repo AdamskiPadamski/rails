@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    if current_user.id != @user.id
+    if session[:user_id] != @user.id
       render :status => :forbidden, :text => "Forbidden"
     else
     end
