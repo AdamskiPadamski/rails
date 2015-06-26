@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :animes
   get 'logins/new'
 
   resources :users

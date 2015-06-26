@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621092609) do
+ActiveRecord::Schema.define(version: 20150626171153) do
+
+  create_table "animes", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "year"
+    t.integer  "number_of_episodes"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "observations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "anime_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
