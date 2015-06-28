@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :animes
-  get 'logins/new'
-
+  
   resources :users
-
+  
   root 'home#default'
   
   get 'about' => 'about#default'
