@@ -14,6 +14,7 @@ class AnimesControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_not_nil assigns(:anime)
   end
 
   test "should create anime" do
