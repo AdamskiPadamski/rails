@@ -24,6 +24,9 @@ table {
 	}
 }
 
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
 .anime {
 	border: 1px solid black;
 	height: 100px;

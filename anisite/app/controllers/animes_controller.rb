@@ -69,6 +69,6 @@ class AnimesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def anime_params
-      params.require(:anime).permit(:title, :year, :number_of_episodes)
+      params.require(:anime).permit(:title, :year, :number_of_episodes, :description)
     end
 end
