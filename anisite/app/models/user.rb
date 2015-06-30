@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
   validates :password, length: { in: 8..72 }
   has_many :observations
   has_many :animes, through: :observations
+  has_many :comments
   has_secure_password
 end
