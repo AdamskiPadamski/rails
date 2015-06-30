@@ -11,27 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
     <%= f.label :first_name %><br>
-    <%= f.text_field :first_name, :placeholder => "Please enter your first name..." %>
-  </div>
-  <div class="field">
+    <%= f.text_field :first_name, :placeholder => "Please enter your first name...", class: 'form-control' %>
+
     <%= f.label :surname %><br>
-    <%= f.text_field :surname, :placeholder => "Please enter your surname..." %>
-  </div>
-  <div class="field">
+    <%= f.text_field :surname, :placeholder => "Please enter your surname...", class: 'form-control' %>
+
     <%= f.label :email %><br>
-    <%= f.text_field :email, :placeholder => "Please enter your email address..." %>
-  </div>
-  <div class="field">
+    <%= f.text_field :email, :placeholder => "Please enter your email address...", class: 'form-control' %>
+
     <%= f.label :password %><br>
-    <%= f.password_field :password, :placeholder => "Please enter your desired password..." %>
-  </div>
-<div class="field">
+    <%= f.password_field :password, :placeholder => "Please enter your desired password...", class: 'form-control' %>
+
     <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, :placeholder => "Please confirm your desired password..." %>
-  </div>
-  <div class="actions">
+    <%= f.password_field :password_confirmation, :placeholder => "Please confirm your desired password...", class: 'form-control' %>
+
     <%= f.submit "Create Account", class: "btn btn-primary" %>
   </div>
 <% end %>

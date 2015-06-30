@@ -13,23 +13,23 @@
 
   <div class="field">
     <%= f.label :first_name %><br>
-    <%= f.text_field :first_name, :placeholder => "Please enter your first name..." %>
+    <%= f.text_field :first_name, :placeholder => "Please enter your first name...", class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :surname %><br>
-    <%= f.text_field :surname, :placeholder => "Please enter your surname..." %>
+    <%= f.text_field :surname, :placeholder => "Please enter your surname...", class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email, :placeholder => "Please enter your email address..." %>
+    <%= f.text_field :email, :placeholder => "Please enter your email address...", class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :password %><br>
-    <%= f.password_field :password, :placeholder => "Please enter your desired password..." %>
+    <%= f.password_field :password, :placeholder => "Please enter your desired password...", class: 'form-control' %>
   </div>
 <div class="field">
     <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, :placeholder => "Please confirm your desired password..." %>
+    <%= f.password_field :password_confirmation, :placeholder => "Please confirm your desired password...", class: 'form-control' %>
   </div>
   <div class="actions">
     <%= f.submit "Update Account", class: "btn btn-primary" %>
