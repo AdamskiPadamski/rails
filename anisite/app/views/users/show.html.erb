@@ -18,6 +18,7 @@
 		</p>
 		<% if @user.id == session[:user_id] %>
 		<%= link_to 'Edit', edit_user_path(@user) %> |
+		<%= link_to 'Add anime', new_anime_path %> |
 		<% end %>
 		<%= link_to 'Back', :back %>
 	</div>
