@@ -1,7 +1,7 @@
 <% provide(:title, "Anisite | #{@user.first_name}") %>
 <div class="row">
-	<p id="notice"><%= notice %></p>
 	<div class="col-md-2 col-md-offset-2">
+		<p id="notice"><%= notice %></p>
 		<p>
 			<strong>First name:</strong>
 			<%= @user.first_name %>
@@ -21,8 +21,8 @@
 		<% end %>
 		<%= link_to 'Back', :back %>
 	</div>
+	<% if @animesseen.length > 0 %>
 	<div id="a", class="col-md-6">
-		<% for i in 0..4 do %>
 		<% @animesseen.each do |a| %>
 		<div class="col-md-4">
 			<div class="anime">
@@ -30,8 +30,8 @@
 			</div>
 		</div>
 		<% end %>
-		<% end %>
 	</div>
+	<% end %>
 </div>
 
 
