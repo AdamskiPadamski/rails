@@ -10,6 +10,18 @@ class AnimesController < ApplicationController
   # GET /animes/1
   # GET /animes/1.json
   def show
+    
+    ## Unlikely to be the most efficient method of doing this 
+    ## Research others in future
+    
+    reviewers = @anime.observations.joins(:user).pluck(:username)
+    reviews = @anime.observations.pluck(:review)
+    
+    @reviewer_review = {}
+    
+    for i in 0..(reviewers.length-1)
+      @reviewer_review[reviewers[i]] = reviews[i]
+    end
   end
 
   # GET /animes/new

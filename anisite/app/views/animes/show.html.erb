@@ -10,6 +10,11 @@
 		<p>
 			<%= @anime.description %>
 		</p>
+		
+		<h3>Reviews</h3>
+		<% @reviewer_review.each do |key, value| %>
+		<p><%= "#{key} - #{value}"  %></p>
+		<% end %>
 
 		<%= link_to 'Edit', edit_anime_path(@anime) %> |
 		<%= link_to 'Destroy', :anime, method: :delete, data: { confirm: 'Are you sure?' } %> |
