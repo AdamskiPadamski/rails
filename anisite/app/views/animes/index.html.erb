@@ -10,7 +10,7 @@
 					<th>Year</th>
 					<th>Number of episodes</th>
 					<th>Number of users who have watched this anime</th>
-					<th colspan="3">Options</th>
+					<th>Average rating out of 10</th>
 				</tr>
 			</thead>
 
@@ -21,9 +21,8 @@
 					<td><%= anime.year %></td>
 					<td><%= anime.number_of_episodes %></td>
 					<td><%= anime.observations.count %></td>
-					<td><%= link_to 'Show', anime %></td>
-					<td><%= link_to 'Edit', edit_anime_path(anime) %></td>
-					<td><%= link_to 'Destroy', anime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					<td><%= anime.observations.average(:rating) %></td>
+					<td><%= link_to 'View anime profile', anime %></td>
 				</tr>
 				<% end %>
 			</tbody>

@@ -12,6 +12,7 @@
 		</p>
 
 		<%= link_to 'Edit', edit_anime_path(@anime) %> |
+		<%= link_to 'Destroy', :anime, method: :delete, data: { confirm: 'Are you sure?' } %> |
 		<%= link_to 'Back to anime list', animes_path %>
 	</div>
 </div>
