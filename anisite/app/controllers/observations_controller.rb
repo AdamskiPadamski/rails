@@ -6,6 +6,10 @@ class ObservationsController < ApplicationController
   
   def create
     ap = add_anime_params
+    if Anime.find_by(title:ap[:anime_id]).nil?
+      Anime.create(title:ap[:anime_id])
+    end
+    
     ap[:anime_id] = Anime.find_by(title:ap[:anime_id]).id
     ap[:user_id] = session[:user_id]
     Observation.create(ap)
