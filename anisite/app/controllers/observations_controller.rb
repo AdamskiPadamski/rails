@@ -8,6 +8,9 @@ class ObservationsController < ApplicationController
     ap = add_anime_params
     if Anime.find_by(title:ap[:anime_id]).nil?
       Anime.create(title:ap[:anime_id])
+    elsif Observation.find_by(anime_id:Anime.find_by(title:ap[:anime_id]).id,user_id:session[:user_id])
+      return redirect_to User.find_by(session[:user_id])
+      
     end
     
     ap[:anime_id] = Anime.find_by(title:ap[:anime_id]).id
