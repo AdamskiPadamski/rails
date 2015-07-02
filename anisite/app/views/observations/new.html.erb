@@ -1,0 +1,20 @@
+<% provide(:title, "Anisite | Add Anime") %>
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<%= form_for(:observation, url: add_anime_path) do |f| %>
+
+		<%= f.label :anime_id %><br>
+		<%= f.text_field :anime_id, :placeholder => "Please enter the desired series...", class: 'form-control' %>
+
+		<%= f.label :rating %><br>
+		<%= f.number_field :rating, :placeholder => "How would you rate the series out of 10?", class: 'form-control' %>
+
+		<%= f.label :review %></br>
+		<%= f.text_area :review, :placeholder => "How would you review the series?", class: 'form-control' %>
+
+		<%= f.submit "Add Anime", class: "btn btn-primary" %>
+
+		<% end %>
+	</div>
+</div>
+
