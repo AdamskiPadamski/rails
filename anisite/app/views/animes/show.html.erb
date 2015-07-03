@@ -12,8 +12,8 @@
 		</p>
 		
 		<h3>Reviews</h3>
-		<% @reviewer_review.each do |key, value| %>
-		<p><%= "#{key} - #{value}"  %></p>
+		<% @reviews.each do |review| %>
+		<p><%= "#{review.username} - #{review.review}"  %></p>
 		<% end %>
 
 		<%= link_to 'Edit', edit_anime_path(@anime) %> |
