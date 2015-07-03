@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :animes
   
-  resources :users
+  resources :users do
+    resources :comments
+  end
   
   root 'home#default'
   

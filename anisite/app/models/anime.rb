@@ -5,4 +5,8 @@ class Anime < ActiveRecord::Base
   has_many :observations
   has_many :users, through: :observations
   
+  def self.get_reviews(anime)
+    return anime.observations.joins(:user).select(:username,:review).where.not(review:"")
+  end
+  
 end

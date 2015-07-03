@@ -32,6 +32,32 @@
 		<% end %>
 	</div>
 	<% end %>
+	
+	<% if @comments.length > 0 %>
+	<div id="b", class="col-md-6 col-md-offset-4">
+		<h3>Comments</h3>
+		<% @comments.each do |comment| %>
+		<div class="col-md-12">
+			<div class="comments">
+				<%= "#{comment.username} - #{comment.written_comment}" %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<% end %>
+	<div class="col-md-6 col-md-offset-4">
+	<%= form_for([@user, @user.comments.build]) do |f| %>
+	  <p>
+	    <%= f.label :Write_comment %><br>
+	    <%= f.text_area :written_comment %>
+	  </p>
+	  <p>
+	    <%= f.submit %>
+	  </p>
+	<% end %>
+	</div>
+	
+	
 </div>
 
 

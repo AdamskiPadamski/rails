@@ -11,7 +11,7 @@ class AnimesController < ApplicationController
   # GET /animes/1.json
   def show
     
-    @reviews = @anime.observations.joins(:user).select(:username,:review)
+    @reviews = Anime.get_reviews(@anime)
 
   end
 
