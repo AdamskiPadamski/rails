@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @animesseen = @user.animes
-    @comments = @user.comments.joins('INNER JOIN users ON users.id = comments.receiver_id').select(:username,:written_comment)
+    @comments = @user.comments.joins('INNER JOIN users ON users.id = comments.receiver_id').select(:username,:written_comment).paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /users/new
